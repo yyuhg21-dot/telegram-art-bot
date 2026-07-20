@@ -2,7 +2,7 @@ from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, ContextTypes, filters
 import os
 
-TOKEN = os.getenv("8857881134:AAEAKSazklCFdONJMZwCMxE9KyoYaAUUccI")
+TOKEN = os.getenv("BOT_TOKEN")
 
 keyboard = [
     ["📦 Артикули"],
