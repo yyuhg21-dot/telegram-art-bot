@@ -2,8 +2,8 @@ from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, ContextTypes, filters
 import os
 
-TOKEN = os.getenv("BOT_TOKEN")
-print("TOKEN =", repr(TOKEN))
+print("TOKEN_LENGTH =", len(TOKEN) if TOKEN else "NONE")
+print("TOKEN_START =", TOKEN[:10] if TOKEN else "NONE")
 
 keyboard = [
     ["📦 Артикули"],
