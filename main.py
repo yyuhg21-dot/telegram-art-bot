@@ -35,9 +35,19 @@ async def text(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"Отримано: {msg}"
     )
 
+import asyncio
+
 app = Application.builder().token(TOKEN).build()
 
 app.add_handler(CommandHandler("start", start))
 app.add_handler(MessageHandler(filters.TEXT, text))
 
-app.run_polling()
+async def main():
+    await app.initialize()
+    await app.start()
+    await app.updater.start_polling()
+
+    while True:
+        await asyncio.sleep(3600)
+
+asyncio.run(main())
