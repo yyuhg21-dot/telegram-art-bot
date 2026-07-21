@@ -3,6 +3,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, ContextTyp
 import os
 
 TOKEN = os.getenv("BOT_TOKEN")
+print("TOKEN =", repr(TOKEN))
 
 keyboard = [
     ["📦 Артикули"],
